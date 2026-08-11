@@ -452,6 +452,28 @@
   .footer-compliments span{ color:var(--champagne); not-italic:normal; font-style:normal; letter-spacing:.06em; }
   .footer-monogram{ font-size:.68rem; letter-spacing:.28em; text-transform:uppercase; color:var(--gold-soft); margin:0; padding-top:1.6rem; border-top:1px solid rgba(184,148,82,.18); display:inline-block; }
 
+  /* ============ UNIFIED FOOTER ============ */
+  .unified-footer{
+    background:linear-gradient(180deg, var(--wine) 0%, var(--black) 100%);
+    color:var(--ivory); text-align:center;
+    padding: clamp(4rem,10vw,7rem) clamp(1.5rem,6vw,3rem) clamp(3rem,6vw,5rem);
+  }
+  .uf-inner{ max-width:620px; margin:0 auto; }
+  .uf-grateful{ margin-bottom:0; }
+  .uf-p{ font-family:var(--font-serif); font-size:clamp(1rem,2.2vw,1.15rem); line-height:1.85; color:rgba(247,241,230,.92); max-width:540px; margin:0 auto 1.4rem; }
+  .uf-names{ font-family:var(--font-display); font-weight:500; font-style:italic; font-size:clamp(1.8rem,4.5vw,2.6rem); margin:2rem 0 0; color:var(--ivory); }
+  .uf-hairline{ width:100%; height:1px; background:linear-gradient(90deg, transparent, rgba(184,148,82,.4), transparent); margin:3rem 0; }
+  .uf-contact{ margin-bottom:0; }
+  .uf-contact-lead{ font-family:var(--font-serif); font-size:1rem; color:rgba(247,241,230,.78); max-width:400px; margin:0 auto 1rem; line-height:1.7; }
+  .uf-contact-name{ font-family:var(--font-display); font-weight:500; font-size:1.5rem; color:var(--ivory); margin:0 0 .4rem; }
+  .uf-contact-phone{ font-family:var(--font-serif); font-size:1rem; color:var(--champagne); margin:0 0 1.6rem; letter-spacing:.06em; }
+  .whatsapp-btn{ display:inline-flex; align-items:center; gap:.7rem; padding:1rem 2.2rem; background:var(--burgundy); color:var(--ivory); font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; font-weight:500; transition:background .35s; }
+  .whatsapp-btn:hover{ background:var(--wine); }
+  .whatsapp-btn svg{ width:18px; height:18px; flex:none; }
+  .uf-compliments{ }
+  .uf-parents{ font-family:var(--font-serif); font-size:.92rem; color:var(--gold); letter-spacing:.06em; margin:0 0 .6rem; }
+  .uf-compliments-text{ font-family:var(--font-serif); font-style:italic; font-size:1rem; color:rgba(247,241,230,.7); margin:0 0 2rem; line-height:1.7; }
+
   /* ============ MUSIC CONTROL ============ */
   #musicBtn{
     position:fixed; z-index:70;
@@ -517,27 +539,7 @@
   <button id="skipIntro" type="button">Skip</button>
 </div>
 
-<!-- ============ NAV ============ -->
-<nav id="nav" aria-label="Primary">
-  <a href="#home" class="nav-logo">N<span class="amp">&amp;</span>D</a>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#story">Story</a></li>
-    <li><a href="#event">Event</a></li>
-    <li><a href="#venue">Venue</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#rsvp">RSVP</a></li>
-  </ul>
-  <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
-</nav>
-<div id="mobileNav">
-  <a href="#home">Home</a>
-  <a href="#story">Story</a>
-  <a href="#event">Event</a>
-  <a href="#venue">Venue</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#rsvp">RSVP</a>
-</div>
+
 
 <main id="site">
 
@@ -656,45 +658,49 @@
     <a class="gold-btn reveal" href="https://www.google.com/maps/search/?api=1&query=Marian+Auditorium%2C+Kodenchery%2C+Calicut%2C+Kerala+673580" target="_blank" rel="noopener">Open in Google Maps</a>
   </section>
 
-  <!-- GALLERY / TRANSITION PHOTO -->
-  <section id="gallery" class="gallery">
-    <div class="gallery-scrim"></div>
-    <div class="gallery-content">
-      <p class="gallery-eyebrow reveal">Two Hearts,</p>
-      <h2 class="gallery-title reveal">One Journey</h2>
-      <p class="gallery-names reveal">Nithin &amp; Daya</p>
+  <!-- UNIFIED FOOTER -->
+  <footer id="rsvp" class="unified-footer">
+    <div class="uf-inner">
+
+      <!-- Grateful Hearts -->
+      <div class="uf-grateful reveal">
+        <p class="eyebrow light">With Grateful Hearts</p>
+        <div class="divider-gold light">
+          <span class="line"></span>
+          <svg class="gem" viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="none" stroke="#D8C19A" stroke-width="1"/></svg>
+          <span class="line"></span>
+        </div>
+        <p class="uf-p reveal">As we celebrate the beginning of our life together, it would mean so much to have you with us. Your presence, prayers, and love will make this joyful occasion even more precious and memorable.</p>
+        <p class="uf-p reveal reveal-1">With grateful hearts, we look forward to celebrating this beautiful beginning surrounded by the people we hold closest to our hearts.</p>
+        <h3 class="uf-names reveal reveal-2">Nithin &amp; Daya</h3>
+      </div>
+
+      <!-- Hairline -->
+      <div class="uf-hairline reveal"></div>
+
+      <!-- Contact -->
+      <div class="uf-contact reveal">
+        <p class="eyebrow light">WhatsApp</p>
+        <p class="uf-contact-lead reveal">For any questions or further information about our special day, please kindly contact</p>
+        <p class="uf-contact-name reveal">Nirmal John</p>
+        <p class="uf-contact-phone reveal">+1 4379742211</p>
+        <a class="whatsapp-btn reveal" href="https://wa.me/14379742211" target="_blank" rel="noopener" aria-label="Contact on WhatsApp">
+          <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.31.64 4.47 1.75 6.32L4 29l7.86-1.71A11.93 11.93 0 0 0 16 27c6.627 0 12-5.373 12-12S22.628 3 16.001 3Zm0 21.6c-1.98 0-3.83-.57-5.39-1.55l-.39-.24-4.66 1.01 1.02-4.53-.26-.4A9.55 9.55 0 0 1 6.4 15c0-5.3 4.3-9.6 9.6-9.6s9.6 4.3 9.6 9.6-4.3 9.6-9.6 9.6Zm5.3-7.19c-.29-.15-1.72-.85-1.98-.95-.27-.1-.46-.15-.66.15-.19.29-.75.94-.92 1.14-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.49-.66-.5h-.56c-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.43s1.05 2.82 1.19 3.02c.15.19 2.06 3.15 5 4.42.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.11.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34Z"/></svg>
+          Contact on WhatsApp
+        </a>
+      </div>
+
+      <!-- Hairline -->
+      <div class="uf-hairline reveal"></div>
+
+      <!-- Compliments -->
+      <div class="uf-compliments reveal">
+        <p class="uf-parents">Mr. Johnykutty &amp; Mrs. Salomy John</p>
+        <p class="uf-compliments-text">With best compliments from Nirmal &amp; Asha</p>
+        <p class="footer-monogram">N &amp; D &nbsp;·&nbsp; 27.08.2026</p>
+      </div>
+
     </div>
-  </section>
-
-  <!-- CLOSING -->
-  <section class="closing section-pad">
-    <p class="eyebrow light reveal">With Grateful Hearts</p>
-    <div class="divider-gold light reveal">
-      <span class="line"></span>
-      <svg class="gem" viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="none" stroke="#D8C19A" stroke-width="1"/></svg>
-      <span class="line"></span>
-    </div>
-    <p class="closing-p reveal">As we celebrate the beginning of our life together, it would mean so much to have you with us. Your presence, prayers, and love will make this joyful occasion even more precious and memorable.</p>
-    <p class="closing-p reveal reveal-1">With grateful hearts, we look forward to celebrating this beautiful beginning surrounded by the people we hold closest to our hearts.</p>
-    <h3 class="closing-names reveal reveal-2">Nithin &amp; Daya</h3>
-    <p class="closing-date reveal reveal-2">27 August 2026</p>
-  </section>
-
-  <!-- CONTACT / RSVP -->
-  <section id="rsvp" class="contact section-pad">
-    <p class="contact-lead reveal">For any questions or further information about our special day, please kindly contact</p>
-    <p class="contact-name reveal">Nirmal John</p>
-    <p class="contact-relation reveal">S/O Mr. Johnykutty &amp; Mrs. Salomy John</p>
-    <a class="whatsapp-btn reveal" href="https://wa.me/14379742211" target="_blank" rel="noopener" aria-label="Contact on WhatsApp">
-      <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.31.64 4.47 1.75 6.32L4 29l7.86-1.71A11.93 11.93 0 0 0 16 27c6.627 0 12-5.373 12-12S22.628 3 16.001 3Zm0 21.6c-1.98 0-3.83-.57-5.39-1.55l-.39-.24-4.66 1.01 1.02-4.53-.26-.4A9.55 9.55 0 0 1 6.4 15c0-5.3 4.3-9.6 9.6-9.6s9.6 4.3 9.6 9.6-4.3 9.6-9.6 9.6Zm5.3-7.19c-.29-.15-1.72-.85-1.98-.95-.27-.1-.46-.15-.66.15-.19.29-.75.94-.92 1.14-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.49-.66-.5h-.56c-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.43s1.05 2.82 1.19 3.02c.15.19 2.06 3.15 5 4.42.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.11.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34Z"/></svg>
-      Contact on WhatsApp
-    </a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p class="footer-compliments">With best compliments from<br><span>Nirmal &amp; Asha</span></p>
-    <p class="footer-monogram">N &amp; D &nbsp;·&nbsp; 27.08.2026</p>
   </footer>
 
 </main>
@@ -765,7 +771,6 @@ var COUNTDOWN_IMG_SRC = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBD
       introVideo.pause();
     }, 900);
     docEl.classList.remove('locked');
-    nav.classList.add('nav-visible');
     musicBtn.classList.add('show');
     startKenBurnsHero();
     initReveals();
@@ -867,30 +872,12 @@ var COUNTDOWN_IMG_SRC = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBD
     if (prefersReduced) heroBg.style.animation = 'none';
   }
 
-  // ---- Nav scroll state ----
-  window.addEventListener('scroll', function(){
-    if (window.scrollY > 40) nav.classList.add('scrolled');
-    else nav.classList.remove('scrolled');
-  }, { passive:true });
-
-  // ---- Mobile nav ----
-  var navToggle = document.getElementById('navToggle');
-  var mobileNav = document.getElementById('mobileNav');
-  navToggle.addEventListener('click', function(){
-    var isOpen = mobileNav.classList.toggle('open');
-    navToggle.classList.toggle('open', isOpen);
-  });
-  mobileNav.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){
-      mobileNav.classList.remove('open');
-      navToggle.classList.remove('open');
-    });
-  });
+  // ---- Nav scroll state (nav removed, keep scroll listener minimal) ----
+  window.addEventListener('scroll', function(){}, { passive:true });
 
   // ---- Background images (set via JS to keep HTML clean; swapped in at build time) ----
   window.addEventListener('DOMContentLoaded', function(){
-    document.getElementById('story').style.backgroundImage = "url('" + STORY_IMG_SRC + "')";
-    document.getElementById('gallery').style.backgroundImage = "url('" + COUPLE_IMG_SRC + "')";
+    document.getElementById('story').style.backgroundImage = "url('our story background.jpeg')";
     document.getElementById('countdownBg').style.backgroundImage = "url('" + COUNTDOWN_IMG_SRC + "')";
     introVideo.src = INTRO_VIDEO_SRC;
   });
