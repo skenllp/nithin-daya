@@ -8,7 +8,11 @@
 <meta property="og:title" content="Nithin &amp; Daya — Wedding Invitation">
 <meta property="og:description" content="Nithin & Daya · 27 August 2026 · Holy Matrimony">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://nithin-daya.vercel.app/">
+<meta property="og:image" content="https://nithin-daya.vercel.app/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://nithin-daya.vercel.app/">
+<meta name="twitter:image" content="https://nithin-daya.vercel.app/og-image.jpg">
 <meta name="theme-color" content="#25080C">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -454,10 +458,28 @@
 
   /* ============ UNIFIED FOOTER ============ */
   .unified-footer{
-    background:linear-gradient(180deg, var(--wine) 0%, var(--black) 100%);
+    position:relative;
+    background:linear-gradient(160deg, #2a0610 0%, var(--wine) 30%, #1a0508 65%, var(--black) 100%);
     color:var(--ivory); text-align:center;
     padding: clamp(4rem,10vw,7rem) clamp(1.5rem,6vw,3rem) clamp(3rem,6vw,5rem);
+    overflow:hidden;
   }
+  .unified-footer::before{
+    content:'';
+    position:absolute; inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.28'/%3E%3C/svg%3E");
+    opacity:.18; mix-blend-mode:soft-light; pointer-events:none; z-index:0;
+  }
+  .unified-footer::after{
+    content:'';
+    position:absolute; inset:0;
+    background:
+      radial-gradient(ellipse 80% 40% at 50% 0%, rgba(184,148,82,0.13), transparent 60%),
+      radial-gradient(ellipse 60% 35% at 20% 100%, rgba(74,15,22,0.45), transparent 55%),
+      radial-gradient(ellipse 60% 35% at 80% 100%, rgba(74,15,22,0.35), transparent 55%);
+    pointer-events:none; z-index:0;
+  }
+  .unified-footer .uf-inner{ position:relative; z-index:1; }
   .uf-inner{ max-width:620px; margin:0 auto; }
   .uf-grateful{ margin-bottom:0; }
   .uf-p{ font-family:var(--font-serif); font-size:clamp(1rem,2.2vw,1.15rem); line-height:1.85; color:rgba(247,241,230,.92); max-width:540px; margin:0 auto 1.4rem; }
