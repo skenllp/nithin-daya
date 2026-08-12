@@ -1894,10 +1894,16 @@
             revealSite();
           });
         }
-        // Safety fallback in case 'ended' never fires (e.g. load failure)
+        // Safety fallback in case 'ended' never fires (e.g. load failure).
+        // Based on the actual video duration (+3s buffer) so longer videos
+        // aren't cut off early; falls back to 9s if duration isn't known yet.
+        var fallbackMs = 9000;
+        if (introVideo.duration && isFinite(introVideo.duration)) {
+          fallbackMs = (introVideo.duration * 1000) + 3000;
+        }
         setTimeout(function () {
           if (!revealed) revealSite();
-        }, 9000);
+        }, fallbackMs);
       }
 
       introVideo.addEventListener('ended', revealSite);
