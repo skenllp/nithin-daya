@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -612,7 +612,7 @@
       min-height: 100svh;
       width: 100%;
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       justify-content: center;
       overflow: hidden;
       background-size: cover;
@@ -642,7 +642,7 @@
       position: absolute;
       inset: 0;
       z-index: 1;
-      background: linear-gradient(180deg, rgba(21, 16, 15, .15) 0%, rgba(21, 16, 15, .05) 32%, rgba(21, 16, 15, .55) 78%, rgba(21, 16, 15, .82) 100%);
+      background: linear-gradient(180deg, rgba(21, 16, 15, .45) 0%, rgba(21, 16, 15, .30) 25%, rgba(21, 16, 15, .30) 70%, rgba(21, 16, 15, .72) 100%);
     }
 
     .hero-content {
@@ -650,7 +650,7 @@
       z-index: 2;
       text-align: center;
       color: var(--ivory);
-      padding: 0 1.4rem clamp(4.5rem, 10vh, 6rem);
+      padding: clamp(2rem, 6vh, 4rem) 1.4rem clamp(3rem, 8vh, 5rem);
       max-width: 760px;
     }
 
@@ -773,7 +773,7 @@
       min-height: 100svh;
       width: 100%;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
       overflow: hidden;
       background: linear-gradient(180deg, var(--wine), var(--burgundy));
@@ -795,15 +795,15 @@
       inset: 0;
       z-index: 1;
       background:
-        radial-gradient(90% 60% at 50% 0%, rgba(184, 148, 82, 0.12), transparent 60%),
-        linear-gradient(180deg, rgba(37, 8, 12, .62) 0%, rgba(37, 8, 12, .42) 35%, rgba(37, 8, 12, .78) 100%);
+        radial-gradient(90% 60% at 50% 0%, rgba(184, 148, 82, 0.06), transparent 50%),
+        linear-gradient(180deg, rgba(37, 8, 12, .10) 0%, rgba(37, 8, 12, .08) 40%, rgba(37, 8, 12, .82) 70%, rgba(37, 8, 12, .94) 100%);
     }
 
     .countdown-content {
       position: relative;
       z-index: 2;
       width: 100%;
-      padding: clamp(1.5rem, 6vw, 3rem);
+      padding: clamp(1.5rem, 6vw, 3rem) clamp(1.5rem, 6vw, 3rem) clamp(3rem, 8vh, 5rem);
     }
 
     .countdown h2 {
@@ -1320,7 +1320,7 @@
     /* ============ UNIFIED FOOTER ============ */
     .unified-footer {
       position: relative;
-      background: linear-gradient(160deg, #2a0610 0%, var(--wine) 30%, #1a0508 65%, var(--black) 100%);
+      background: linear-gradient(160deg, #4a1020 0%, #3a0e1a 30%, #2e0c15 65%, #1f0a10 100%);
       color: var(--ivory);
       text-align: center;
       padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 6vw, 3rem) clamp(3rem, 6vw, 5rem);
@@ -1403,11 +1403,12 @@
     }
 
     .uf-contact-name {
-      font-family: var(--font-display);
-      font-weight: 500;
-      font-size: 1.5rem;
-      color: var(--ivory);
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: clamp(1rem, 2.2vw, 1.1rem);
+      color: var(--champagne);
       margin: 0 0 .4rem;
+      letter-spacing: .04em;
     }
 
     .uf-contact-phone {
@@ -1422,11 +1423,11 @@
       display: inline-flex;
       align-items: center;
       gap: .7rem;
-      padding: 1rem 2.2rem;
+      padding: .85rem 1.8rem;
       background: var(--burgundy);
       color: var(--ivory);
-      font-size: .75rem;
-      letter-spacing: .2em;
+      font-size: .68rem;
+      letter-spacing: .18em;
       text-transform: uppercase;
       font-weight: 500;
       transition: background .35s;
